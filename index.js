@@ -16,10 +16,17 @@ let connection;
 
 async function main() {
     connection = await createConnection({
-        'host': process.env.DB_HOST,
-        'user': process.env.DB_USER,
+        'host': process.env.DB_HOST, //server
+        'user': process.env.DB_USER, 
         'database': process.env.DB_NAME,
         'password': process.env.DB_PASSWORD
+    })
+
+    app.get('/customers', async (req, res) => {
+        let [customers] = await connection.execute('SELECT * FROM Customers INNER JOIN Companies ON Customers.company_id = Companies.company_id');
+        res.render('customers/index', {
+            'customers': customers
+        })
     })
 
     app.get('/', (req,res) => {
