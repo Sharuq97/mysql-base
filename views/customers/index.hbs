@@ -14,9 +14,13 @@
         <td>{{Customers.last_name}}</td>
         <td>{{Customers.rating}}</td>
         <td>{{Companies.name}}</td>
+        <td><a href="/customers/{{Customers.customer_id}}/edit">Edit</a></td>
+
+        <td><a href="/customers/{{Customers.customer_id}}/delete">Delete</a></td>
 
     </tr>
     {{/each}}
 </table>
 {{/block}}
 {{/extends}}
+
