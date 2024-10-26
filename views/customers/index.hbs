@@ -7,6 +7,7 @@
         <th>Last Name</th>
         <th>Rating</th>
         <th>Company</th>
+
     </tr>
     {{#each customers}}
     <tr>
@@ -14,9 +15,9 @@
         <td>{{Customers.last_name}}</td>
         <td>{{Customers.rating}}</td>
         <td>{{Companies.name}}</td>
-        <td><a href="/customers/{{Customers.customer_id}}/edit">Edit</a></td>
+        <td><a href="/customers/{{Customers.customer_id}}/edit" class="btn">Edit</a></td>
 
-        <td><a href="/customers/{{Customers.customer_id}}/delete">Delete</a></td>
+        <td><a href="/customers/{{Customers.customer_id}}/delete" class="btn">Delete</a></td>
 
     </tr>
     {{/each}}
