@@ -35,3 +35,4 @@ CREATE TABLE Employees (
     gender CHAR(1) CHECK (gender IN ('M', 'F')),
     FOREIGN KEY (department_id) REFERENCES Departments(department_id)
 );
+

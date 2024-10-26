@@ -29,6 +29,38 @@ async function main() {
         'password': process.env.DB_PASSWORD
     })
 
+    //EMployees
+    app.get('/employees', async (req, res) => {
+        let [employees] = await connection.execute({
+            'sql':`
+            SELECT * from Employees
+            `,
+            nestTables: true
+
+        });
+        res.render('employees/index', {
+            'employees': employees
+        })
+        console.log(employees);
+    })
+
+    //Companies
+    app.get('/companies', async (req, res) => {
+        let [companies] = await connection.execute({
+            'sql':`
+            SELECT * from Companies
+            `,
+            nestTables: true
+
+        });
+        res.render('companies/index', {
+            'companies': companies
+        })
+        console.log(companies);
+    })
+
+
+    //CUstomers
     app.get('/customers', async (req, res) => {
         let [customers] = await connection.execute({
             'sql':`
