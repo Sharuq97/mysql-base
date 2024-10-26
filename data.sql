@@ -23,6 +23,7 @@ INSERT INTO Departments (name) VALUES
 
 -- Inserting data into Employees
 INSERT INTO Employees (first_name, last_name, department_id) VALUES
-('Elon', 'Musk', 1),
-('Ratan', 'Tata', 1),
-('Mukesh', 'Ambani', 2);
+('Darren', 'Brown', 1),
+('Justin', 'Davis', 1),
+('Ratan', 'Tata', 2);
+
