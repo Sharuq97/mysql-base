@@ -32,5 +32,6 @@ CREATE TABLE Employees (
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
     department_id INT,
+    gender CHAR(1) CHECK (gender IN ('M', 'F')),
     FOREIGN KEY (department_id) REFERENCES Departments(department_id)
 );

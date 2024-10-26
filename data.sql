@@ -22,8 +22,10 @@ INSERT INTO Departments (name) VALUES
 ('Designs');
 
 -- Inserting data into Employees
-INSERT INTO Employees (first_name, last_name, department_id) VALUES
-('Darren', 'Brown', 1),
-('Justin', 'Davis', 1),
-('Ratan', 'Tata', 2);
+INSERT INTO Employees (first_name, last_name, department_id, gender) VALUES
+('Darren', 'Brown', 1, 'M'),
+('Justin', 'Davis', 1, 'M'),
+('Ratan', 'Tata', 2, 'M'),
+('Kamala', 'Harris', 2, 'F');  
+-- M for male, F for Female
 
