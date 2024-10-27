@@ -1,4 +1,3 @@
--- Sample INSERT Statements for Financial Advising Company Schema
 use crm;
 -- Inserting data into Companies
 INSERT INTO Companies (name, description) VALUES
